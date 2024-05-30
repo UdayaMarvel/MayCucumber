@@ -1,0 +1,100 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because \"in.co.irctc.BuyTicket_Stepdefinition.driver\" is null\r\n\tat in.co.irctc.BuyTicket_Stepdefinition.launch_the_browser_and_url(BuyTicket_Stepdefinition.java:56)\r\n\tat ✽.launch the browser and url(./src/test/resources/IRCTC.feature:5)\r\n",
+              "duration": 67275100,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "launch the browser and url",
+            "match": {
+              "location": "BuyTicket_Stepdefinition.launch_the_browser_and_url()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Buy Ticket",
+        "description": "",
+        "id": "irctc-buy-tickets;buy-ticket",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13900,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "user enters value or clicks on from field with one dim map",
+            "match": {
+              "location": "BuyTicket_Stepdefinition.user_enters_value_or_clicks_on_from_field_with_one_dim_map(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "location1",
+                  "Chennai"
+                ]
+              },
+              {
+                "cells": [
+                  "location2",
+                  "Koyambedu"
+                ]
+              },
+              {
+                "cells": [
+                  "location3",
+                  "Central"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@main"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@sanity"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "IRCTC Buy TICKETS",
+    "description": "",
+    "id": "irctc-buy-tickets",
+    "keyword": "Feature",
+    "uri": "./src/test/resources/IRCTC.feature",
+    "tags": [
+      {
+        "name": "@main",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
