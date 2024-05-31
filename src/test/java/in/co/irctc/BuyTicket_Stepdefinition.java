@@ -52,14 +52,12 @@ public void launch_the_browser_and_url() throws IOException {
 	FileOutputStream f2 = new FileOutputStream(f);
 	p.save(f2, "updated");
 	
-//	co.browserLaunch();
     driver.get(url);
 }
 	
 @Given("user enters value or clicks on from field with one dim map")
 public void user_enters_value_or_clicks_on_from_field_with_one_dim_map(DataTable dataTable) throws MalformedURLException, IOException {
-//	Map<String, String> StartLocations = dataTable.asMap(String.class, String.class);
-//	String start = StartLocations.get("location3");
+
 	List<WebElement> links = driver.findElements(By.tagName("link"));
 	Iterator<WebElement> link = links.iterator();
 	
@@ -82,24 +80,13 @@ public void user_enters_value_or_clicks_on_from_field_with_one_dim_map(DataTable
 		}
 		}
 	}
-	
-	
-//	WebElement from = driver.findElement(By.id("src"));
-	
-//	co.insertText(sl.getFrom(), start);
-    
-//    WebElement location1 = driver.findElement(By.xpath("//li[contains(text(),'Koyambedu')]"));
-//    location1.click();
-//	co.touch(sl.getLocation1());
 }
 
 @When("user enters value or clicks on to field with one dim list")
 public void user_enters_value_or_clicks_on_to_field_with_one_dim_list(DataTable dataTable) {
 	List<String> EndLocations = dataTable.asList();
 	String end = EndLocations.get(1);
-//	WebElement to = driver.findElement(By.id("dest"));
     co.insertText(sl.getTo(), end);
-//    driver.findElement(By.xpath("//li[contains(text(),'Kada')]")).click();
     co.touch(sl.getLocation2());
 }
 
@@ -109,20 +96,17 @@ public void validate_the_date() {
 	   driver.findElement(By.xpath("//td[@class='current day']")).click();
 	   co.handlingWindow();
 }
-
 @When("user clicks on search")
 public void user_clicks_on_search() {
 	   driver.findElement(By.xpath("//button[text()='Search Buses']")).click();
 }
 
-//Scenario Outline
 @Given("user enters value or clicks on from field {string}")
 public void user_enters_value_or_clicks_on_from_field(String start) {
 	WebElement from = driver.findElement(By.id("src"));
     from.sendKeys(start);
     driver.findElement(By.xpath("//li[contains(text(),'Koyambedu')]")).click();
 }
-
 @When("user enters value or clicks on to field {string}")
 public void user_enters_value_or_clicks_on_to_field(String end) {
 	WebElement to = driver.findElement(By.id("dest"));
@@ -130,10 +114,9 @@ public void user_enters_value_or_clicks_on_to_field(String end) {
     driver.findElement(By.xpath("//li[contains(text(),'Kada')]")).click();
 }
 
+public void Sample() {
+}
 
-
-	
-	
 	
 	
 	
