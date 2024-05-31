@@ -51,7 +51,6 @@ public void launch_the_browser_and_url() throws IOException {
 	p.setProperty("pass","0987654321");
 	FileOutputStream f2 = new FileOutputStream(f);
 	p.save(f2, "updated");
-	
 //	co.browserLaunch();
     driver.get(url);
 }
@@ -128,6 +127,13 @@ public void user_enters_value_or_clicks_on_to_field(String end) {
 	WebElement to = driver.findElement(By.id("dest"));
     to.sendKeys(end);
     driver.findElement(By.xpath("//li[contains(text(),'Kada')]")).click();
+} 
+
+
+public void method() {
+	
+	System.out.println("Updated the code in Udaya Branch");
+	
 }
 
 
