@@ -115,7 +115,6 @@ public void user_enters_value_or_clicks_on_to_field(String end) {
 }
 
 public void Sample() {
-	System.out.println("First Change Updated");
 }
 
 	
