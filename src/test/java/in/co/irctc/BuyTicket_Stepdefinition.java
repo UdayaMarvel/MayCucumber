@@ -130,7 +130,9 @@ public void user_enters_value_or_clicks_on_to_field(String end) {
     driver.findElement(By.xpath("//li[contains(text(),'Kada')]")).click();
 }
 
-
+public void Sample() {
+	System.out.println("First Change Updated");
+}
 
 	
 	
