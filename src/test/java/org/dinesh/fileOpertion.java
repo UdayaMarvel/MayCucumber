@@ -21,14 +21,7 @@ public class fileOpertion {
 		boolean i = f3.isHidden();
 		System.out.println( i );
 		
-		File f4 = new File("E:\\dinesh");
-		boolean s = f4.exists();
-		System.out.println( s );
-		
-		File f5 = new File("E:\\");
-		File[] F = f5.listFiles();
-		for (File x : F) {
-		System.out.println( x );
+	
 		
 		
 		
