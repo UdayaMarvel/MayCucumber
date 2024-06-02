@@ -15,7 +15,7 @@ public class WorkingCollection {
 		l.add(521);
 		l.add(765);
 		l.add(788);
-		l.add(978);
+	
 		
 		System.out.println(l);
         int size = l.size();
@@ -65,10 +65,11 @@ public class WorkingCollection {
 				l1.add(1000);
 				System.out.println(l1);
 		 
-	     l1.retainAll(l);
-			   System.out.println(l1);
+	     l.retainAll(l);
+			   System.out.println(l);
                   
 			
 	}
+	
 
 }
