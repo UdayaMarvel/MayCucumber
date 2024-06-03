@@ -1,5 +1,4 @@
 package Git.priyanka;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -7,7 +6,6 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -18,11 +16,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class priceList {
-	
 	   public static void pList(List<String> textList, List<String> textList1) throws IOException {
 	        File file = new File("C:\\sample\\filp8.xlsx");
 	        int a = textList.size();
@@ -54,7 +49,6 @@ public class priceList {
 	public static void main(String[] args) throws InterruptedException, Throwable
 	{
 	WebDriverManager.edgedriver().setup();
-
 		WebDriver wd= new EdgeDriver();
 		wd.get("https://www.flipkart.com/");
 	WebElement E= wd.findElement(By.name("q"));
@@ -64,9 +58,7 @@ public class priceList {
 	  textList = new LinkedList<>();
 	  textList1 = new LinkedList<>();
 	Map<List<String>, List<String>> pricelist = new LinkedHashMap<>();
-
 	for (int i = 1; i <= 25; i++) {
-	  
 	    List<WebElement> elements = wd.findElements(By.xpath("(//div[contains(text(),'REDMI ')])[" + i + "]"));
 	    for (WebElement element : elements) {
 	        String text = element.getText();
@@ -83,19 +75,12 @@ public class priceList {
 	        textList1.add(text1);
 	    }
 	    }
-	
 	pricelist.put(new LinkedList<>(textList), new LinkedList<>(textList1));
 	for (Map.Entry<List<String>, List<String>> entry : pricelist.entrySet()) {
 	  System.out.println("Key: " + entry.getKey());
 	    System.out.println("Value: " + entry.getValue());
 	    priceList.pList(textList,textList1);
 	}
-	
-	
-	
 
 	}
-	
-	
-
 }
